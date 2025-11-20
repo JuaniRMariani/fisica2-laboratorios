@@ -1,0 +1,11 @@
+# Dependencias para Laboratorio 2 - Ley de Biot-Savart
+# Universidad Nacional del Sur - Física II
+
+# Cálculo numérico
+numpy>=1.20.0
+
+# Visualización y gráficos
+matplotlib>=3.3.0
+
+# Funciones científicas (opcional pero recomendado)
+scipy>=1.6.0
