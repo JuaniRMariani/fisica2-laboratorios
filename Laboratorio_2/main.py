@@ -167,10 +167,21 @@ def verificar_dependencias():
         return True
 
 
+def ensure_plots_dir():
+    """Crea la carpeta 'plots' si no existe (evita FileNotFoundError al guardar figuras)."""
+    try:
+        os.makedirs('plots', exist_ok=True)
+    except Exception:
+        # si por alguna razón no se puede crear, no interrumpir la ejecución
+        pass
+
 def main():
     """
     Función principal del menú interactivo.
     """
+    # Asegurar que exista la carpeta de salida de gráficos
+    ensure_plots_dir()
+
     # Verificar dependencias al inicio
     if not verificar_dependencias():
         respuesta = input("\n¿Desea continuar de todas formas? (s/n): ")
